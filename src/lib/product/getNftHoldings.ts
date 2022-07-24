@@ -6,10 +6,10 @@ import { ethers } from "ethers";
 
 
 
-const infuraKey = "7b6e08e0772b4c93a860cf2d40f8b400";
-const ethersProvider = new ethers.providers.InfuraProvider("rinkeby", infuraKey);
+// const infuraKey = "7b6e08e0772b4c93a860cf2d40f8b400";
+// const ethersProvider = new ethers.providers.InfuraProvider("rinkeby", infuraKey);
 
-// const ethersProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.g.alchemy.com/v2/S0wwNAH54JiaIRou2mcRl2MgHZkfbRSm");
+const ethersProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.g.alchemy.com/v2/S0wwNAH54JiaIRou2mcRl2MgHZkfbRSm");
 export async function getNftHoldingsForAddress(address: any, nftContractAddress: any) {
 	const erc721 = new Contract(nftContractAddress, abi.erc721);
 	const provider = new Provider(ethersProvider);
